@@ -129,3 +129,17 @@ traceroute
 - ACL
 - NAT
 - IPv6
+
+---
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| 📐 [Network Design](docs/Design.md) | Network architecture, design goals, and topology overview |
+| 📘 [VLSM Addressing](docs/VLSM.md) | IP addressing plan and subnet design |
+| 🚦 [EIGRP](docs/EIGRP.md) | Dynamic routing configuration and concepts |
+| 🔁 [HSRP](docs/HSRP.md) | Gateway redundancy implementation |
+| ✅ [Verification](docs/Verification.md) | Validation commands and expected results |
+| 🔧 [Troubleshooting](docs/Troubleshooting.md) | Common issues and troubleshooting steps |
+| 📚 [Lessons Learned](docs/Lessons.md) | Key takeaways and future improvements |
