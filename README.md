@@ -36,7 +36,7 @@ Topics include:
 
 | Lab | Description | Status |
 |-----|-------------|:------:|
-| 🌐 [Building an Enterprise Network with VLSM, EIGRP, and HSRP](./Building an Enterprise Network with VLSM, EIGRP, and HSRP/) | Enterprise network design using VLSM, EIGRP, and HSRP | ✅ |
+| 🌐 [Building an Enterprise Network with VLSM, EIGRP, and HSRP](./Building-an-Enterprise-Network-with-VLSM-EIGRP-and-HSRP/) | Enterprise network design using VLSM, EIGRP, and HSRP | ✅ |
 | 🚧 OSPF Multi-Area | Coming Soon | ⏳ |
 | 🚧 VLAN & Inter-VLAN Routing | Coming Soon | ⏳ |
 | 🚧 STP & EtherChannel | Coming Soon | ⏳ |
