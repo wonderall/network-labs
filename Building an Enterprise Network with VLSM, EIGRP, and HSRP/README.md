@@ -33,10 +33,10 @@
 
 ## 🗺️ Network Topology
 
-> topology/topology.png
+> topology/topology.jpg
 
 <p align="center">
-<img src="topology/topology.png" width="900">
+<img src="topology/topology.jpg" width="900">
 </p>
 
 ---
