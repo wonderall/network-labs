@@ -1,6 +1,7 @@
 # Enterprise Campus Network Design Lab
 
 ![Topology](Topology/topology.png)
+![Topology](Topology/topology_pkt.png)
 
 ## Overview
 
