@@ -248,15 +248,13 @@ PC1> tracert 11.1.1.162
 ### Expected Path
 
 ```
-PC1
+PC4
  ↓
-SW3
- ↓
-M1
- ↓
-SW1
+M2
  ↓
 SW2
+ ↓
+M6
  ↓
 M7
  ↓
