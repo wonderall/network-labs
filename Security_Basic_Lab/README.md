@@ -160,9 +160,9 @@
 |---------|---------|
 |<img src="screenshots/topology.png" width="450">|<img src="screenshots/ssh_login.png" width="450">|
 
-|Ping Test|ACL Verification|
+|telnet Test|ACL Verification|
 |---------|----------------|
-|<img src="screenshots/ping_test.png" width="450">|<img src="screenshots/acl_test.png" width="450">|
+|<img src="screenshots/telnet_login.png" width="450">|<img src="screenshots/acl_test.png" width="450">|
 
 |Syslog|EIGRP Neighbor|
 |------|---------------|
