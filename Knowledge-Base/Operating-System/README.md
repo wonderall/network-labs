@@ -67,8 +67,14 @@
 
 ---
 
-# 📌 References
+## 📚 Learning Resources
 
-* 『명품 운영체제』
-* YouTube 운영체제 강의 시리즈
-* 운영체제 관련 공식 문서 및 참고 자료
+### Primary Textbook
+- 명품 운영체제
+
+### Video Lectures
+- [김영길 교수 운영체제 강의 플레이리스트](https://www.youtube.com/@YoungGil_Kim/playlists)
+
+### Notes
+- 강의 내용을 바탕으로 핵심 개념을 이해한 방식으로 정리합니다.
+- 교재 내용을 그대로 옮기지 않고, 개인 학습 노트 형태로 작성합니다.
