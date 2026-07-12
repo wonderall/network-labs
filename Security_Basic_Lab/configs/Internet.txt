@@ -1,0 +1,27 @@
+!
+hostname Internet
+!
+enable secret level 5 aaa
+enable secret level 10 bbb
+enable secret ccc
+!
+interface FastEthernet0/0
+ description Backbone Network
+ ip address 10.1.2.1 255.255.255.0
+ no shutdown
+!
+interface FastEthernet0/1
+ description ISP Network
+ ip address 10.1.1.2 255.255.255.0
+ no shutdown
+!
+router eigrp 100
+ network 10.0.0.0
+ no auto-summary
+!
+privilege exec level 5 ping
+privilege exec all level 5 show
+privilege exec level 10 configure
+privilege exec level 10 configure terminal
+privilege configure all level 10 access-list
+!

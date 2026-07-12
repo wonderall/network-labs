@@ -1,0 +1,38 @@
+!
+hostname NY
+!
+security passwords min-length 8
+!
+login block-for 20 attempts 2 within 10
+login on-failure log
+login on-success log
+!
+username 111111 password aabb3344
+!
+interface FastEthernet0/0
+ description WAN Link
+ ip address 10.1.3.1 255.255.255.0
+ no shutdown
+!
+interface FastEthernet0/1
+ description Branch LAN
+ ip address 10.1.4.1 255.255.255.0
+ no shutdown
+!
+router eigrp 100
+ network 10.0.0.0
+ no auto-summary
+!
+ip access-list extended sl_def_acl
+ deny tcp any any eq telnet
+ deny tcp any any eq www
+ deny tcp any any eq 22
+ permit tcp any any eq 22
+!
+logging trap debugging
+logging 10.1.8.2
+!
+line vty 0 4
+ login local
+ transport input telnet
+!
