@@ -2,9 +2,6 @@
 
 > **Enterprise Network Security Fundamentals using Cisco Packet Tracer**
 
-<p align="center">
-  <img src="screenshots/topology.png" alt="Network Topology" width="900">
-</p>
 
 <p align="center">
 
@@ -43,7 +40,7 @@
 # 🖥 Network Topology
 
 <p align="center">
-<img src="docs/Topology.png" width="1000">
+<img src="screenshots/topology.png" width="1000">
 </p>
 
 ---
