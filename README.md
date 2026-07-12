@@ -1,56 +1,57 @@
-# 🌐 Network Labs & Operations Portfolio
+# 🌐 Network Engineering Portfolio
 
-> 네트워크 실습, 운영 및 유지보수 경험을 정리한 포트폴리오입니다.
+> 네트워크 엔지니어로 성장하며 학습한 이론, 실습, 운영 및 장애 대응 경험을 체계적으로 정리한 포트폴리오입니다.
 
-이 저장소는 네트워크 기술을 학습하며 수행한 실습과, 실제 운영 환경에서 경험한 유지보수 및 장애 대응 사례를 체계적으로 기록하기 위해 만들었습니다.
+이 저장소는 단순한 실습 결과만 모아둔 공간이 아니라, 네트워크 엔지니어로 학습하고 경험한 내용을 지속적으로 기록하기 위한 개인 기술 문서입니다.
 
 > **Notice**
 >
-> - 기관명, IP 주소, 호스트명 및 기타 민감한 정보는 비식별 처리하였습니다.
-> - 실제 운영 환경을 기반으로 작성하였으며, 수행하지 않은 업무는 포함하지 않았습니다.
+> * 실제 운영 환경을 기반으로 작성한 문서는 기관명, IP 주소, 호스트명 등 민감한 정보를 비식별 처리하였습니다.
+> * 수행하지 않은 업무는 포함하지 않았으며, 실습과 운영 경험을 구분하여 기록합니다.
 
 ---
 
 # 📂 Repository Structure
 
-```
+```text
 network-labs/
+├── Knowledge-Base/
 ├── Labs/
-├── Maintenance-Casebook/
-└── Maintenance-Operations/
+├── Maintenance-Operations/
+└── Maintenance-Casebook/
 ```
 
----
+## 📖 Knowledge-Base
 
-## 📚 Labs
+네트워크 및 IT 기초 이론을 학습하며 작성한 개인 노트입니다.
 
-네트워크 기술 학습을 위한 실습 프로젝트입니다.
+**Topics**
 
-### Topics
-
-- VLAN
-- STP / RSTP
-- HSRP (Packet Tracer)
-- VRRP
-- EIGRP
-- Static Routing
-- DNS
-- DHCP
-- Packet Capture (Wireshark)
+* Computer Science
+* Computer Networking
+* Linux
+* Data Communications
+* Signals and Systems
+* Information & Communications Engineering
+* Cloud
+* Security
+* Certification Notes
 
 ---
 
-## 🚨 Maintenance-Casebook
+## 🧪 Labs
 
-실제 유지보수 과정에서 발생한 장애 사례를 정리한 문서입니다.
+실습 환경(Packet Tracer, GNS3, EVE-NG 등)에서 수행한 네트워크 실습 프로젝트입니다.
 
-포함 내용
+**Examples**
 
-- 장애 증상
-- 원인 분석
-- 조치 과정
-- 검증 결과
-- Lessons Learned
+* VLAN
+* STP / RSTP
+* HSRP / VRRP
+* Static Routing
+* EIGRP
+* DNS / DHCP
+* Packet Capture (Wireshark)
 
 ---
 
@@ -58,45 +59,63 @@ network-labs/
 
 실제 운영 환경에서 수행한 점검 및 유지보수 업무를 정리한 문서입니다.
 
-포함 내용
+**Examples**
 
-- Network Health Check
-- System Health Check
-- Configuration Review
-- Verification Procedure
-- 운영 절차 및 점검 기록
+* Network Health Check
+* System Health Check
+* Configuration Review
+* Verification Procedure
+* 운영 점검 기록
 
 ---
 
-# 💻 Experience
+## 🚨 Maintenance-Casebook
 
-### Network
+실제 운영 중 발생한 장애 사례를 기록한 문서입니다.
 
-- Cisco
-- Alcatel OmniSwitch
-- Dasan Networks
-- Handreamnet
+각 사례는 다음 내용을 포함합니다.
+
+* 증상(Symptoms)
+* 원인 분석(Root Cause)
+* 조치(Action Taken)
+* 검증(Verification)
+* Lessons Learned
+
+---
+
+# 🎯 Goals
+
+* 네트워크 기초부터 심화 기술까지 지속적으로 학습
+* 실습을 통해 이론 검증
+* 운영 경험 및 점검 절차 기록
+* 장애 대응 사례 축적
+* 기술 문서 작성 습관 형성
+
+---
+
+# 🖥️ Technologies
+
+### Networking
+
+* Cisco
+* Alcatel OmniSwitch
+* Dasan Networks
+* Handreamnet
 
 ### Load Balancer
 
-- PioLink PAS
-- Radware Alteon
+* PioLink PAS
+* Radware Alteon
 
 ### Linux
 
-- CentOS
+* CentOS
 
-### Infrastructure
+### Tools
 
-- Enterprise Network
-- CCTV Network
-- Public Sector Infrastructure
-
----
-
-# 🎯 Goal
-
-- 네트워크 운영 경험 문서화
-- 장애 대응 사례 정리
-- 유지보수 절차 표준화
-- 지속적인 기술 학습 및 실습 기록
+* Packet Tracer
+* Wireshark
+* GNS3
+* EVE-NG
+* Git
+* GitHub
