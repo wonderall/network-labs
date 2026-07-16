@@ -1,4 +1,4 @@
-# Case 10 - Genian NAC 동일 IP 중복 등록
+# Case 09 - Genian NAC 동일 IP 중복 등록
 
 ## 개요
 - **장비** : Genian NAC
