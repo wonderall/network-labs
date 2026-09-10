@@ -36,5 +36,3 @@ graph TD
 - **IP 주소 체계**: SADP 툴과 같은 전용 소프트웨어를 사용하여 네트워크에 연결된 카메라와 NVR의 IP 주소를 검색하고 할당합니다. <doc-source-group><doc-source index="38" /><doc-source index="41" /></doc-source-group>
 - **카메라 등록 및 보안**: NVR 관리 메뉴에서 검색된 카메라를 추가하며, 보안을 위해 카메라마다 개별 비밀번호를 설정해야 합니다. <doc-source-group><doc-source index="57" /><doc-source index="189" /></doc-source-group>
 - **지능형 이벤트 설정**: 가상선 침범(Line Crossing)이나 움직임 감지 등 특정 이벤트 발생 시 알람이 울리거나 모바일로 알림을 보내도록 설정할 수 있습니다. <doc-source-group><doc-source index="315" /><doc-source index="337" /></doc-source-group>
-
-이 내용을 바탕으로 새로운 노트를 생성해 드릴까요? 아니면 특정 제조사(하이크비전, 한화 등)의 설정 방식에 대해 더 자세히 알고 싶으신가요?
