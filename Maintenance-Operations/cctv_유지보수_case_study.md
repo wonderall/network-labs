@@ -1,0 +1,40 @@
+NVR(Network Video Recorder) 시스템의 물리적·기능적 구조를 한눈에 파악할 수 있도록 Markdown 형식으로 정리해 드릴게요.
+## NVR 시스템 구조 및 구성 가이드
+
+
+## 1. NVR 시스템의 물리적 연결 구조
+NVR 시스템은 IP 카메라를 네트워크(LAN)로 연결하여 영상을 디지털 방식으로 저장하고 관리하는 구조입니다.
+
+
+```mermaid
+graph TD
+    A["IP 카메라 1"] -- Cat6 LAN 케이블 --> B["PoE 스위치"]
+    C["IP 카메라 2"] -- Cat6 LAN 케이블 --> B
+    D["IP 카메라 3"] -- Cat6 LAN 케이블 --> B
+    B -- LAN 케이블 --> E["NVR 녹화기"]
+    B -- LAN 케이블 --> F["인터넷 공유기/라우터"]
+    E -- HDMI/VGA --> G["모니터"]
+    F -- 무선/유선 --> H["PC/모바일 앱"]
+```
+
+
+
+- **PoE(Power over Ethernet) 스위치**: 랜 케이블 하나로 데이터 전송과 전원 공급을 동시에 수행하여 카메라마다 별도의 전원선을 뽑을 필요가 없습니다. <doc-source-group><doc-source index="101" /><doc-source index="169" /></doc-source-group>
+- **NVR 녹화기**: 네트워크를 통해 들어온 영상 데이터를 수신하여 저장하고, 모니터로 출력하는 핵심 장치입니다. <doc-source-group><doc-source index="22" /><doc-source index="153" /></doc-source-group>
+
+## 2. 주요 구성 요소 및 특징
+
+| **구성 요소** | **주요 역할 및 특징** |
+| --- | --- |
+| **하드디스크 (HDD)** | 영상 데이터가 실제로 저장되는 공간입니다. NVR 내부 보드에 SATA 케이블과 전원 케이블로 연결됩니다. <doc-source-group><doc-source index="156" /><doc-source index="159" /></doc-source-group> |
+| **랜 케이블 (Cat6)** | 데이터 전송 용량과 안정성을 위해 Cat5e보다 Cat6 케이블 사용이 권장됩니다. <doc-source-group><doc-source index="142" /></doc-source-group> |
+| **입출력 포트** | 영상 출력을 위한 HDMI/VGA 포트, 네트워크 연결을 위한 LAN 포트, 마우스 및 백업용 USB 포트로 구성됩니다. <doc-source-group><doc-source index="24" /><doc-source index="152" /></doc-source-group> |
+
+
+## 3. 시스템 설정 및 관리 구조
+
+- **IP 주소 체계**: SADP 툴과 같은 전용 소프트웨어를 사용하여 네트워크에 연결된 카메라와 NVR의 IP 주소를 검색하고 할당합니다. <doc-source-group><doc-source index="38" /><doc-source index="41" /></doc-source-group>
+- **카메라 등록 및 보안**: NVR 관리 메뉴에서 검색된 카메라를 추가하며, 보안을 위해 카메라마다 개별 비밀번호를 설정해야 합니다. <doc-source-group><doc-source index="57" /><doc-source index="189" /></doc-source-group>
+- **지능형 이벤트 설정**: 가상선 침범(Line Crossing)이나 움직임 감지 등 특정 이벤트 발생 시 알람이 울리거나 모바일로 알림을 보내도록 설정할 수 있습니다. <doc-source-group><doc-source index="315" /><doc-source index="337" /></doc-source-group>
+
+이 내용을 바탕으로 새로운 노트를 생성해 드릴까요? 아니면 특정 제조사(하이크비전, 한화 등)의 설정 방식에 대해 더 자세히 알고 싶으신가요?
