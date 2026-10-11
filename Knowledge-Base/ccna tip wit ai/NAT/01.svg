@@ -1,0 +1,117 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f8f7f4" />
+
+  <!-- 제목 -->
+  <text x="400" y="44" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="24" font-weight="700" fill="#0a0a0a">IPv4 주소 고갈과 IPv6의 무한한 확장성</text>
+
+  <!-- 아이콘 정의 -->
+  <defs>
+    <g id="phone">
+      <rect x="-10" y="-18" width="20" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="0" cy="12" r="2" fill="currentColor"/>
+    </g>
+    <g id="laptop">
+      <rect x="-18" y="-12" width="36" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <line x1="-22" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="iot">
+      <circle cx="0" cy="0" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="0" cy="0" r="3" fill="currentColor"/>
+      <path d="M -6 -6 Q 0 -10 6 -6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </g>
+  </defs>
+
+  <!-- IPv4 섹션 -->
+  <g id="ipv4-group">
+    <text x="230" y="160" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="18" font-weight="700" fill="#737373">IPv4 (약 43억 개)</text>
+    <rect x="100" y="180" width="260" height="320" rx="8" fill="#f5f5f4" stroke="#e5e5e5" stroke-width="2" stroke-dasharray="8 4"/>
+    
+    <!-- 기존 블록들 (거의 가득 참) -->
+    <g fill="#737373" opacity="0.6">
+      <rect x="110" y="440" width="50" height="50" rx="4"/>
+      <rect x="170" y="440" width="50" height="50" rx="4"/>
+      <rect x="230" y="440" width="50" height="50" rx="4"/>
+      <rect x="290" y="440" width="50" height="50" rx="4"/>
+      
+      <rect x="110" y="380" width="50" height="50" rx="4"/>
+      <rect x="170" y="380" width="50" height="50" rx="4"/>
+      <rect x="230" y="380" width="50" height="50" rx="4"/>
+      <rect x="290" y="380" width="50" height="50" rx="4"/>
+
+      <rect x="110" y="320" width="50" height="50" rx="4"/>
+      <rect x="170" y="320" width="50" height="50" rx="4"/>
+      <rect x="230" y="320" width="50" height="50" rx="4"/>
+      <rect x="290" y="320" width="50" height="50" rx="4"/>
+
+      <rect x="110" y="260" width="50" height="50" rx="4"/>
+      <rect x="170" y="260" width="50" height="50" rx="4"/>
+      <rect x="230" y="260" width="50" height="50" rx="4"/>
+    </g>
+
+    <!-- 마지막 남은 블록 채워짐 -->
+    <rect x="290" y="260" width="50" height="50" rx="4" fill="#7c3aed" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="1s" begin="1s" fill="freeze" />
+    </rect>
+
+    <!-- 연결 시도하는 기기 -->
+    <g color="#7c3aed">
+      <use href="#phone" x="230" y="100">
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="0 120" dur="1.5s" begin="2s" fill="freeze" />
+      </use>
+    </g>
+
+    <!-- 경고 메시지 -->
+    <g opacity="0">
+      <rect x="140" y="210" width="180" height="40" rx="20" fill="#e11d48"/>
+      <text x="230" y="230" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" font-weight="700" fill="white">주소 부족 (Full)</text>
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="3.5s" fill="freeze" />
+    </g>
+  </g>
+
+  <!-- IPv6 섹션 -->
+  <g id="ipv6-group" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="4.5s" fill="freeze" />
+    <text x="570" y="160" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="18" font-weight="700" fill="#7c3aed">IPv6 (약 340간 개)</text>
+    <rect x="440" y="180" width="260" height="320" rx="8" fill="#f5f5f4" stroke="#7c3aed" stroke-width="2"/>
+    
+    <!-- 광활한 그리드 배경 -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e5e5e5" stroke-width="0.5"/>
+    </pattern>
+    <rect x="445" y="185" width="250" height="310" fill="url(#grid)" />
+
+    <!-- 기기들이 자유롭게 연결되는 애니메이션 -->
+    <g color="#7c3aed">
+      <!-- 기기 1 -->
+      <g>
+        <use href="#phone" x="500" y="50" opacity="0.8"/>
+        <animateMotion path="M 0 0 L 0 200" dur="3s" begin="5s" repeatCount="indefinite" />
+      </g>
+      <!-- 기기 2 -->
+      <g>
+        <use href="#laptop" x="570" y="50" opacity="0.8"/>
+        <animateMotion path="M 0 0 L 0 250" dur="4s" begin="5.5s" repeatCount="indefinite" />
+      </g>
+      <!-- 기기 3 -->
+      <g>
+        <use href="#iot" x="640" y="50" opacity="0.8"/>
+        <animateMotion path="M 0 0 L 0 300" dur="3.5s" begin="6s" repeatCount="indefinite" />
+      </g>
+      <!-- 기기 4 -->
+      <g>
+        <use href="#phone" x="540" y="50" opacity="0.8"/>
+        <animateMotion path="M 0 0 L 0 180" dur="2.5s" begin="6.5s" repeatCount="indefinite" />
+      </g>
+    </g>
+
+    <!-- 성공 메시지 -->
+    <g>
+      <rect x="480" y="210" width="180" height="40" rx="20" fill="#059669"/>
+      <text x="570" y="230" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="16" font-weight="700" fill="white">무한한 연결 가능</text>
+    </g>
+  </g>
+
+  <!-- 하단 설명 -->
+  <text x="400" y="550" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="#737373">IPv4의 한계를 넘어, IPv6는 모든 사물에 고유 주소를 부여할 수 있는 공간을 제공합니다.</text>
+</svg>
