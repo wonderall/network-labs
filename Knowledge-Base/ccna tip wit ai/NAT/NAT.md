@@ -20,7 +20,101 @@
 
 
 ## 2. NAT, 우리 집 대문지기!
-![02.svg](./02.svg)
+![02](https://github.com/user-attachments/assets/b6c4b154-5437-49c4-9cc5-4ceff11cdbd9)
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f8f7f4" />
+
+  <!-- 제목 -->
+  <text x="400" y="44" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="24" font-weight="700" fill="#0a0a0a">NAT(네트워크 주소 변환)의 원리: 문지기 역할</text>
+
+  <!-- 영역 구분선 -->
+  <line x1="480" y1="120" x2="480" y2="520" stroke="#e5e5e5" stroke-width="2" stroke-dasharray="8 4" />
+  <text x="260" y="100" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="16" font-weight="600" fill="#737373">사설 네트워크 (내부)</text>
+  <text x="640" y="100" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="16" font-weight="600" fill="#737373">공인 네트워크 (외부)</text>
+
+  <!-- 집 (사설 네트워크) -->
+  <path d="M 80 520 L 80 250 L 260 140 L 440 250 L 440 520 Z" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="3" />
+  
+  <!-- 내부 사람들 (사설 IP들) -->
+  <g id="people">
+    <g transform="translate(160, 240)">
+      <circle cx="0" cy="0" r="20" fill="#e5e5e5" stroke="#737373" stroke-width="2" />
+      <text y="36" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#737373">192.168.0.2</text>
+    </g>
+    <g transform="translate(160, 340)">
+      <circle cx="0" cy="0" r="20" fill="#e5e5e5" stroke="#737373" stroke-width="2" />
+      <text y="36" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#737373">192.168.0.3</text>
+    </g>
+    <g transform="translate(160, 440)">
+      <circle cx="0" cy="0" r="20" fill="#e5e5e5" stroke="#737373" stroke-width="2" />
+      <text y="36" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#737373">192.168.0.4</text>
+    </g>
+  </g>
+
+  <!-- NAT 장비 (문) -->
+  <g transform="translate(420, 300)">
+    <rect width="40" height="100" rx="4" fill="#2563eb" />
+    <text x="20" y="-20" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="600" fill="#2563eb">NAT 장비</text>
+    <text x="20" y="120" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" font-weight="600" fill="#0a0a0a">공인 IP: 203.0.113.1</text>
+  </g>
+
+  <!-- 인터넷 (외부) -->
+  <path d="M 600 350 Q 600 310 640 310 Q 660 280 700 300 Q 740 300 740 340 Q 760 360 740 400 Q 740 430 700 430 Q 640 430 640 390 Q 600 390 600 350" fill="#e5e5e5" stroke="#737373" stroke-width="2" />
+  <text x="675" y="365" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="16" font-weight="600" fill="#0a0a0a">인터넷</text>
+
+  <!-- 데이터 패킷 애니메이션 -->
+  <circle id="packet" r="8" fill="#2563eb" opacity="0">
+    <!-- 1. 사설 IP에서 NAT로 이동 -->
+    <animate id="step1" attributeName="opacity" from="0" to="1" dur="0.1s" begin="0s; step4.end + 1s" fill="freeze" />
+    <animateMotion id="move1" dur="1.5s" begin="step1.begin" fill="freeze" path="M 180 240 L 420 350" />
+    
+    <!-- 2. NAT에서 인터넷으로 이동 (주소 변환됨) -->
+    <animateMotion id="move2" dur="1.5s" begin="move1.end" fill="freeze" path="M 460 350 L 620 350" />
+    
+    <!-- 3. 인터넷에서 NAT로 응답 -->
+    <animateMotion id="move3" dur="1.5s" begin="move2.end + 0.5s" fill="freeze" path="M 620 350 L 460 350" />
+    
+    <!-- 4. NAT에서 원래 사설 IP로 전달 -->
+    <animateMotion id="move4" dur="1.5s" begin="move3.end" fill="freeze" path="M 420 350 L 180 240" />
+    <animate id="step4" attributeName="opacity" from="1" to="0" dur="0.1s" begin="move4.end" fill="freeze" />
+  </circle>
+
+  <!-- 상태 라벨 (NAT 위) -->
+  <g opacity="0">
+    <rect x="360" y="240" width="120" height="30" rx="15" fill="white" stroke="#2563eb" stroke-width="1" />
+    <text x="420" y="255" text-anchor="middle" dominant-baseline="middle" font-family="'Pretendard', sans-serif" font-size="12" fill="#2563eb" font-weight="600">주소 변환 중...</text>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1s" begin="move1.end - 0.2s" fill="freeze" />
+    <animate attributeName="opacity" values="0;1;1;0" dur="1s" begin="move3.end - 0.2s" fill="freeze" />
+  </g>
+
+  <!-- 패킷 정보 툴팁 -->
+  <g>
+    <rect x="250" y="480" width="300" height="40" rx="8" fill="#0a0a0a" opacity="0.8" />
+    <text x="400" y="505" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="14" fill="white">
+      <tspan id="info_text">요청: 사설 IP → 공인 IP 변환</tspan>
+    </text>
+    
+    <set xlink:href="#info_text" attributeName="textContent" to="요청: 사설 IP → 공인 IP 변환" begin="step1.begin" />
+    <set xlink:href="#info_text" attributeName="textContent" to="외부 통신: 공인 IP 사용" begin="move2.begin" />
+    <set xlink:href="#info_text" attributeName="textContent" to="응답 수신: NAT 매핑 확인" begin="move3.begin" />
+    <set xlink:href="#info_text" attributeName="textContent" to="전달: 공인 IP → 사설 IP 변환" begin="move4.begin" />
+  </g>
+
+  <!-- 매핑 테이블 시각화 (문지기의 장부) -->
+  <g transform="translate(350, 400)">
+    <rect width="140" height="60" rx="4" fill="white" stroke="#e5e5e5" stroke-width="1" />
+    <text x="70" y="15" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" font-weight="700" fill="#737373">NAT 매핑 테이블</text>
+    <line x1="10" y1="22" x2="130" y2="22" stroke="#e5e5e5" />
+    <text x="70" y="38" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#2563eb">192.168.0.2 : 8080</text>
+    <text x="70" y="50" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="9" fill="#2563eb">↔ 203.0.113.1 : 15001</text>
+    
+    <!-- 테이블 하이라이트 애니메이션 -->
+    <rect width="140" height="60" rx="4" fill="none" stroke="#2563eb" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="move1.end; move3.end" />
+    </rect>
+  </g>
+</svg>
 
 NAT는 **네트워크 주소 변환(Network Address Translation)**의 줄임말이야 . 쉽게 말해, 우리 집 안에서 쓰는 주소(사설 IP)를 외부 인터넷에서 통하는 주소(공인 IP)로 바꿔주는 기술이지. 마치 우리 집 안에 여러 가족 구성원(사설 IP)이 있는데, 외부 우체부(인터넷)는 우리 집 대문(NAT 장비)의 주소(공인 IP)만 알고 편지를 배달하는 것과 같아.
 
