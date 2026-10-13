@@ -1,0 +1,179 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f8f7f4" />
+
+  <!-- 제목 -->
+  <text x="400" y="44" font-family="'Pretendard', sans-serif" font-size="24" font-weight="700" fill="#0a0a0a" text-anchor="middle">데이터 센터 네트워크: 고속 데이터 전송</text>
+
+  <!-- 정의: 애니메이션 경로 및 요소 -->
+  <defs>
+    <!-- 경로 정의 -->
+    <path id="path1" d="M 400 310 L 640 310" />
+    <path id="path1_rev" d="M 640 310 L 400 310" />
+    <path id="path2" d="M 400 310 L 520 500" />
+    <path id="path2_rev" d="M 520 500 L 400 310" />
+    <path id="path3" d="M 400 310 L 280 500" />
+    <path id="path3_rev" d="M 280 500 L 400 310" />
+    <path id="path4" d="M 400 310 L 160 310" />
+    <path id="path4_rev" d="M 160 310 L 400 310" />
+    <path id="path5" d="M 400 310 L 280 120" />
+    <path id="path5_rev" d="M 280 120 L 400 310" />
+    <path id="path6" d="M 400 310 L 520 120" />
+    <path id="path6_rev" d="M 520 120 L 400 310" />
+
+    <!-- 데이터 패킷 (자동차 메타포) -->
+    <g id="packet">
+      <rect x="-10" y="-4" width="20" height="8" rx="2" fill="#7c3aed" />
+      <rect x="2" y="-2" width="6" height="4" rx="1" fill="#ffffff" fill-opacity="0.6" />
+    </g>
+  </defs>
+
+  <!-- 고속 레인 (도로) -->
+  <g stroke="#e5e5e5" stroke-width="12" stroke-linecap="round">
+    <line x1="400" y1="310" x2="640" y2="310" />
+    <line x1="400" y1="310" x2="520" y2="500" />
+    <line x1="400" y1="310" x2="280" y2="500" />
+    <line x1="400" y1="310" x2="160" y2="310" />
+    <line x1="400" y1="310" x2="280" y2="120" />
+    <line x1="400" y1="310" x2="520" y2="120" />
+  </g>
+  <g stroke="#737373" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="400" y1="310" x2="640" y2="310" />
+    <line x1="400" y1="310" x2="520" y2="500" />
+    <line x1="400" y1="310" x2="280" y2="500" />
+    <line x1="400" y1="310" x2="160" y2="310" />
+    <line x1="400" y1="310" x2="280" y2="120" />
+    <line x1="400" y1="310" x2="520" y2="120" />
+  </g>
+
+  <!-- 데이터 패킷 애니메이션 -->
+  <!-- 레인 1 -->
+  <use href="#packet">
+    <animateMotion dur="1.8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path1" />
+    </animateMotion>
+  </use>
+  <use href="#packet">
+    <animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path1_rev" />
+    </animateMotion>
+  </use>
+
+  <!-- 레인 2 -->
+  <use href="#packet">
+    <animateMotion dur="2.2s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path2" />
+    </animateMotion>
+  </use>
+  <use href="#packet">
+    <animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path2_rev" />
+    </animateMotion>
+  </use>
+
+  <!-- 레인 3 -->
+  <use href="#packet">
+    <animateMotion dur="2s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path3" />
+    </animateMotion>
+  </use>
+  <use href="#packet">
+    <animateMotion dur="2s" begin="1s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path3_rev" />
+    </animateMotion>
+  </use>
+
+  <!-- 레인 4 -->
+  <use href="#packet">
+    <animateMotion dur="1.6s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path4" />
+    </animateMotion>
+  </use>
+  <use href="#packet">
+    <animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path4_rev" />
+    </animateMotion>
+  </use>
+
+  <!-- 레인 5 -->
+  <use href="#packet">
+    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path5" />
+    </animateMotion>
+  </use>
+  <use href="#packet">
+    <animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path5_rev" />
+    </animateMotion>
+  </use>
+
+  <!-- 레인 6 -->
+  <use href="#packet">
+    <animateMotion dur="1.9s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path6" />
+    </animateMotion>
+  </use>
+  <use href="#packet">
+    <animateMotion dur="1.9s" begin="0.95s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#path6_rev" />
+    </animateMotion>
+  </use>
+
+  <!-- 주변 장치들 -->
+  <!-- 서버 -->
+  <g transform="translate(640, 310)">
+    <rect x="-25" y="-25" width="50" height="50" rx="4" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="2" />
+    <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#737373" stroke-width="2" />
+    <line x1="-15" y1="0" x2="15" y2="0" stroke="#737373" stroke-width="2" />
+    <line x1="-15" y1="10" x2="15" y2="10" stroke="#737373" stroke-width="2" />
+    <text y="45" font-family="sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle">서버</text>
+  </g>
+
+  <!-- 스토리지 -->
+  <g transform="translate(520, 500)">
+    <rect x="-25" y="-20" width="50" height="40" rx="2" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="2" />
+    <ellipse cx="0" cy="-10" rx="20" ry="5" fill="none" stroke="#737373" stroke-width="1.5" />
+    <ellipse cx="0" cy="0" rx="20" ry="5" fill="none" stroke="#737373" stroke-width="1.5" />
+    <ellipse cx="0" cy="10" rx="20" ry="5" fill="none" stroke="#737373" stroke-width="1.5" />
+    <text y="40" font-family="sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle">스토리지</text>
+  </g>
+
+  <!-- 클라우드 -->
+  <g transform="translate(280, 500)">
+    <path d="M-20,10 Q-25,10 -25,0 Q-25,-15 -10,-15 Q-5,-25 10,-25 Q25,-25 25,-10 Q35,-10 35,5 Q35,15 20,15 L-20,15 Z" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="2" />
+    <text y="40" font-family="sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle">클라우드</text>
+  </g>
+
+  <!-- 데이터베이스 -->
+  <g transform="translate(160, 310)">
+    <path d="M-20,-15 A20,8 0 1,0 20,-15 A20,8 0 1,0 -20,-15 M-20,-15 L-20,15 A20,8 0 0,0 20,15 L20,-15" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="2" />
+    <text y="45" font-family="sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle">데이터베이스</text>
+  </g>
+
+  <!-- 워크스테이션 -->
+  <g transform="translate(280, 120)">
+    <rect x="-22" y="-20" width="44" height="30" rx="2" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="2" />
+    <rect x="-8" y="10" width="16" height="5" fill="#0a0a0a" />
+    <line x1="-15" y1="15" x2="15" y2="15" stroke="#0a0a0a" stroke-width="2" />
+    <text y="-35" font-family="sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle">워크스테이션</text>
+  </g>
+
+  <!-- 백업 -->
+  <g transform="translate(520, 120)">
+    <path d="M0,-20 L18,-10 L18,10 L0,20 L-18,10 L-18,-10 Z" fill="#f5f5f4" stroke="#0a0a0a" stroke-width="2" />
+    <path d="M-8,0 L-2,6 L8,-6" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <text y="-35" font-family="sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle">백업 시스템</text>
+  </g>
+
+  <!-- 중앙 허브 -->
+  <g transform="translate(400, 310)">
+    <circle r="45" fill="#ffffff" stroke="#0a0a0a" stroke-width="3" />
+    <circle r="35" fill="none" stroke="#e5e5e5" stroke-width="1" />
+    <!-- 허브 코어 애니메이션 -->
+    <circle r="15" fill="#7c3aed">
+      <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text y="65" font-family="sans-serif" font-size="16" font-weight="700" fill="#0a0a0a" text-anchor="middle">메인 허브</text>
+  </g>
+</svg>

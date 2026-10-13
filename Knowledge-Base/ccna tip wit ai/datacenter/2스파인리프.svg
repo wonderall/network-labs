@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- 배경 -->
+  <rect width="800" height="600" fill="#f8f7f4" />
+
+  <!-- 제목 -->
+  <text x="400" y="44" font-family="'Pretendard', -apple-system, sans-serif" font-size="24" font-weight="700" fill="#0a0a0a" text-anchor="middle" dominant-baseline="middle">스파인-리프(Spine-Leaf) 네트워크 아키텍처</text>
+
+  <!-- 계층 라벨 -->
+  <text x="400" y="88" font-family="'Pretendard', sans-serif" font-size="16" font-weight="500" fill="#737373" text-anchor="middle">스파인 계층 (Spine Layer)</text>
+  <text x="400" y="288" font-family="'Pretendard', sans-serif" font-size="16" font-weight="500" fill="#737373" text-anchor="middle">리프 계층 (Leaf Layer)</text>
+  <text x="400" y="560" font-family="'Pretendard', sans-serif" font-size="16" font-weight="500" fill="#737373" text-anchor="middle">서버 (End Nodes)</text>
+
+  <!-- 풀 메시 연결선 (Full Mesh) -->
+  <g stroke="#e5e5e5" stroke-width="1.5">
+    <!-- Leaf 1 connections -->
+    <line x1="150" y1="330" x2="250" y2="130" />
+    <line x1="150" y1="330" x2="400" y2="130" />
+    <line x1="150" y1="330" x2="550" y2="130" />
+    <!-- Leaf 2 connections -->
+    <line x1="316" y1="330" x2="250" y2="130" />
+    <line x1="316" y1="330" x2="400" y2="130" />
+    <line x1="316" y1="330" x2="550" y2="130" />
+    <!-- Leaf 3 connections -->
+    <line x1="483" y1="330" x2="250" y2="130" />
+    <line x1="483" y1="330" x2="400" y2="130" />
+    <line x1="483" y1="330" x2="550" y2="130" />
+    <!-- Leaf 4 connections -->
+    <line x1="650" y1="330" x2="250" y2="130" />
+    <line x1="650" y1="330" x2="400" y2="130" />
+    <line x1="650" y1="330" x2="550" y2="130" />
+  </g>
+
+  <!-- 서버 연결선 -->
+  <line x1="150" y1="500" x2="150" y2="330" stroke="#e5e5e5" stroke-width="2" />
+  <line x1="650" y1="500" x2="650" y2="330" stroke="#e5e5e5" stroke-width="2" />
+
+  <!-- 스파인 스위치 -->
+  <g fill="#f5f5f4" stroke="#0a0a0a" stroke-width="1.5">
+    <rect x="190" y="110" width="120" height="40" rx="4" />
+    <rect x="340" y="110" width="120" height="40" rx="4" />
+    <rect x="490" y="110" width="120" height="40" rx="4" />
+  </g>
+  <g font-family="'Pretendard', sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle" dominant-baseline="middle">
+    <text x="250" y="130">스파인 1</text>
+    <text x="400" y="130">스파인 2</text>
+    <text x="550" y="130">스파인 3</text>
+  </g>
+
+  <!-- 리프 스위치 -->
+  <g fill="#f5f5f4" stroke="#0a0a0a" stroke-width="1.5">
+    <rect x="95" y="310" width="110" height="40" rx="4" />
+    <rect x="261" y="310" width="110" height="40" rx="4" />
+    <rect x="428" y="310" width="110" height="40" rx="4" />
+    <rect x="595" y="310" width="110" height="40" rx="4" />
+  </g>
+  <g font-family="'Pretendard', sans-serif" font-size="14" font-weight="500" fill="#0a0a0a" text-anchor="middle" dominant-baseline="middle">
+    <text x="150" y="330">리프 1</text>
+    <text x="316" y="330">리프 2</text>
+    <text x="483" y="330">리프 3</text>
+    <text x="650" y="330">리프 4</text>
+  </g>
+
+  <!-- 서버 -->
+  <g fill="#f5f5f4" stroke="#737373" stroke-width="1">
+    <rect x="115" y="485" width="70" height="30" rx="2" />
+    <rect x="615" y="485" width="70" height="30" rx="2" />
+  </g>
+  <g font-family="'Pretendard', sans-serif" font-size="12" font-weight="500" fill="#737373" text-anchor="middle" dominant-baseline="middle">
+    <text x="150" y="500">서버 A</text>
+    <text x="650" y="500">서버 B</text>
+  </g>
+
+  <!-- 동서향 트래픽 라벨 -->
+  <text x="400" y="230" font-family="'Pretendard', sans-serif" font-size="14" font-weight="600" fill="#7c3aed" text-anchor="middle">동서향(East-West) 트래픽 흐름</text>
+
+  <!-- 데이터 패킷 애니메이션 -->
+  <circle r="6" fill="#7c3aed">
+    <animateMotion 
+      dur="4s" 
+      repeatCount="indefinite" 
+      path="M 150 500 L 150 330 L 400 130 L 650 330 L 650 500" 
+      calcMode="linear" />
+    <animate attributeName="opacity" values="0;1;1;1;0" dur="4s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- 경로 하이라이트 (선택사항: 흐름을 더 명확하게) -->
+  <path d="M 150 500 L 150 330 L 400 130 L 650 330 L 650 500" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="10,10" opacity="0.3">
+    <animate attributeName="stroke-dashoffset" from="100" to="0" dur="4s" repeatCount="indefinite" />
+  </path>
+</svg>
